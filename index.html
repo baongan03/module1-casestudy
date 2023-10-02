@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+  <link rel="stylesheet" href="case1.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <img class="img-logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+      class="brand-img" alt="">
+    <input type="text" class="search-box" placeholder="Search">
+    <div class="nav-items">
+      <a href="#"><ion-icon name="home-outline" class="icon"></ion-icon></a>
+      <a href="#"><ion-icon name="paper-plane-outline" class="icon" onclick="openPost()"></ion-icon></a>
+      <a href="#"><ion-icon name="compass-outline" class="icon"></ion-icon></a>
+      <a href="#"><ion-icon name="heart-outline" class="icon"></ion-icon></a>
+      <div class="icon-user-profile"></div>
+      <img class="img-avatar" src="./image/anh.jpg">
+    </div>
+    </div>
+  </nav>
+
+  <section class="main">
+    <div class="wrapper">
+      <div class="left-col">
+        <div class="status-wrapper">
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/photo-1530281700549-e82e7bf110d6.jpg" alt=""></div>
+            <p class="username">username1</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/photo-1506903536293-8419385acdce.avif" alt=""></div>
+            <p class="username">username2</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/photo-1537151625747-768eb6cf92b2.avif" alt=""></div>
+            <p class="username">username3</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/photo-1586671267731-da2cf3ceeb80.avif" alt=""></div>
+            <p class="username">username4</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/photo-1596492784531-6e6eb5ea9993.avif" alt=""></div>
+            <p class="username">username5</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/premium_photo-1686090449483-89a9b794e7cf.avif" alt=""></div>
+            <p class="username">username6</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/premium_photo-1678722937221-c8c6e7905ebe.avif" alt=""></div>
+            <p class="username">username7</p>
+          </div>
+          <div class="status-card">
+            <div class="profile-pic"><img src="./image/photo-1588943211346-0908a1fb0b01.avif" alt=""></div>
+            <p class="username">username8</p>
+          </div>
+        </div>
+        <div id="posts">
+        <!-- <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic"><img src="./image/photo-1530281700549-e82e7bf110d6.jpg" alt=""></div>
+              <p class="username" id="username-post">gấuu</p>
+            </div>
+            <img src="./image/bn.svg" class="option" alt="">
+          </div>
+          <img src="./image/photo-1530281700549-e82e7bf110d6.jpg" class="post-image" alt="">
+          <div class="post content">
+            <div class="reaction-wrapper">
+              <div class="icon-reaction">
+                <img src="./image/heart-outline.svg" class="icon" alt="">
+                
+                <img src="./image/comment.svg" class="icon" alt="">
+                <img src="./image/send.svg" class="icon" alt="">
+                <img src="./image/save.svg" class=" save icon" alt="">
+              </div>
+              <div>
+                <p class="likes">2,510 likes</p>
+              </div>
+              <div id="post-content">
+                <p class="description"><span>username </span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum accusamus, officiis provident odio minus exercitationem iure nulla sapiente. Enim explicabo
+                  eaque soluta aliquam voluptatem quaerat voluptas natus dolor vel aliquid?</p>
+              </div>
+              <div>
+                <p class="post-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="comment-wrapper">
+              <img src="./image/happy-outline.svg" class="icon" alt="">
+              <input type="text" class="comment-box" planceholder="Add a comment">
+              <button class="comment-btn">post</button>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic"><img src="./image/photo-1506903536293-8419385acdce.avif" alt=""></div>
+              <p class="username">đậuu</p>
+            </div>
+            <img src="./image/bn.svg" class="option" alt="">
+          </div>
+          <img src="./image/photo-1506903536293-8419385acdce.avif" class="post-image" alt="">
+          <div class="post content">
+            <div class="reaction-wrapper">
+              <div class="icon-reaction">
+                <img src="./image/heart-outline.svg" class="icon" alt="">
+                <img src="./image/comment.svg" class="icon" alt="">
+                <img src="./image/send.svg" class="icon" alt="">
+                <img src="./image/save.svg" class=" save icon" alt="">
+              </div>
+              <div>
+                <p class="likes">2,510 likes</p>
+              </div>
+              <div>
+                <p class="description"><span>username </span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum accusamus, officiis provident odio minus exercitationem iure nulla sapiente. Enim explicabo
+                  eaque soluta aliquam voluptatem quaerat voluptas natus dolor vel aliquid?</p>
+              </div>
+              <div>
+                <p class="post-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="comment-wrapper">
+              <img src="./image/happy-outline.svg" class="icon" alt="">
+              <input type="text" class="comment-box" planceholder="Add a comment">
+              <button class="comment-btn">post</button>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic"><img src="./image/photo-1537151625747-768eb6cf92b2.avif" alt=""></div>
+              <p class="username">xoàii</p>
+            </div>
+            <img src="./image/bn.svg" class="option" alt="">
+          </div>
+          <img src="./image/photo-1537151625747-768eb6cf92b2.avif" class="post-image" alt="">
+          <div class="post content">
+            <div class="reaction-wrapper">
+              <div class="icon-reaction">
+                <img src="./image/heart-outline.svg" class="icon" alt="">
+                <img src="./image/comment.svg" class="icon" alt="">
+                <img src="./image/send.svg" class="icon" alt="">
+                <img src="./image/save.svg" class=" save icon" alt="">
+              </div>
+              <div>
+                <p class="likes">2,510 likes</p>
+              </div>
+              <div>
+                <p class="description"><span>username </span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum accusamus, officiis provident odio minus exercitationem iure nulla sapiente. Enim explicabo
+                  eaque soluta aliquam voluptatem quaerat voluptas natus dolor vel aliquid?</p>
+              </div>
+              <div>
+                <p class="post-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="comment-wrapper">
+              <img src="./image/happy-outline.svg" class="icon" alt="">
+              <input type="text" class="comment-box" planceholder="Add a comment">
+              <button class="comment-btn">post</button>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic"><img src="./image/photo-1586671267731-da2cf3ceeb80.avif" alt=""></div>
+              <p class="username">vàngg</p>
+            </div>
+            <img src="./image/bn.svg" class="option" alt="">
+          </div>
+          <img src="./image/photo-1586671267731-da2cf3ceeb80.avif" class="post-image" alt="">
+          <div class="post content">
+            <div class="reaction-wrapper">
+              <div class="icon-reaction">
+                <img src="./image/heart-outline.svg" alt="heart" class="icon" onclick="likeButton()">
+
+                <img src="./image/comment.svg" class="icon" alt="">
+                <img src="./image/send.svg" class="icon" alt="">
+                <img src="./image/save.svg" class=" save icon" alt="">
+              </div>
+              <div>
+                <p class="likes">2,510 likes</p>
+              </div>
+              <div>
+                <p class="description"><span>username </span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum accusamus, officiis provident odio minus exercitationem iure nulla sapiente. Enim explicabo
+                  eaque soluta aliquam voluptatem quaerat voluptas natus dolor vel aliquid?</p>
+              </div>
+              <div>
+                <p class="post-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="comment-wrapper">
+              <img src="./image/happy-outline.svg" class="icon" alt="">
+              <input type="text" class="comment-box" planceholder="Add a comment">
+              <button class="comment-btn">post</button>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic"><img src="./image/photo-1596492784531-6e6eb5ea9993.avif" alt=""></div>
+              <p class="username">bôngg</p>
+            </div>
+            <img src="./image/bn.svg" class="option" alt="">
+          </div>
+          <img src="./image/photo-1596492784531-6e6eb5ea9993.avif" class="post-image" alt="">
+          <div class="post content">
+            <div class="reaction-wrapper">
+              <div class="icon-reaction">
+                <img src="./image/heart-outline.svg" class="icon" alt="">
+                <img src="./image/comment.svg" class="icon" alt="">
+                <img src="./image/send.svg" class="icon" alt="">
+                <img src="./image/save.svg" class=" save icon" alt="">
+              </div>
+              <div>
+                <p class="likes">2,510 likes</p>
+              </div>
+              <div>
+                <p class="description"><span>username </span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum accusamus, officiis provident odio minus exercitationem iure nulla sapiente. Enim explicabo
+                  eaque soluta aliquam voluptatem quaerat voluptas natus dolor vel aliquid?</p>
+              </div>
+              <div>
+                <p class="post-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="comment-wrapper">
+              <img src="./image/happy-outline.svg" class="icon" alt="">
+              <input type="text" class="comment-box" planceholder="Add a comment">
+              <button class="comment-btn">post</button>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="post">
+          <div class="info">
+            <div class="user">
+              <div class="profile-pic"><img src="./image/premium_photo-1686090449483-89a9b794e7cf.avif" alt=""></div>
+              <p class="username">bunn</p>
+            </div>
+            <img src="./image/bn.svg" class="option" alt="">
+          </div>
+          <img src="./image/premium_photo-1686090449483-89a9b794e7cf.avif" class="post-image" alt="">
+          <div class="post content">
+            <div class="reaction-wrapper">
+              <div class="icon-reaction">
+                <img src="./image/heart-outline.svg" class="icon" alt="">
+                <img src="./image/comment.svg" class="icon" alt="">
+                <img src="./image/send.svg" class="icon" alt="">
+                <img src="./image/save.svg" class=" save icon" alt="">
+              </div>
+              <div>
+                <p class="likes">2,510 likes</p>
+              </div>
+              <div>
+                <p class="description"><span>username </span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Rerum accusamus, officiis provident odio minus exercitationem iure nulla sapiente. Enim explicabo
+                  eaque soluta aliquam voluptatem quaerat voluptas natus dolor vel aliquid?</p>
+              </div>
+              <div>
+                <p class="post-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="comment-wrapper">
+              <img src="./image/happy-outline.svg" class="icon" alt="">
+              <input type="text" class="comment-box" planceholder="Add a comment">
+              <button class="comment-btn">post</button>
+
+            </div>
+          </div>
+
+        </div> -->
+
+        </div>
+
+        <div class="newPostIns">
+
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="./image/anh.jpg" alt="">
+            </div>
+            <div>
+              <p class="username" id="username-avatar">gấuu channel</p>
+              <p class="sub-text">gauxinh2307</p>
+            </div>
+            <button class="action-btn">switch</button>
+        </div>
+        <p class="suggestion-text">suggestion for you</p>
+        <div class="profile-card">
+            <div class="profile-pic">
+              <img src="./image/photo-1506903536293-8419385acdce.avif" alt="">
+              </div>
+              <div>
+                <p class="username">username1</p>
+                <p class="sub-text">bngan_2611</p>
+              </div>
+              <button class="action-btn">follow</button>
+        </div>
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="./image/photo-1537151625747-768eb6cf92b2.avif" alt="">
+            </div>
+            <div>
+              <p class="username">username2</p>
+              <p class="sub-text">ft2007</p>
+            </div>
+            <button class="action-btn">follow</button>
+        </div>
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="./image/photo-1586671267731-da2cf3ceeb80.avif" alt="">
+            </div>
+            <div>
+              <p class="username">username3</p>
+              <p class="sub-text">hnamm25</p>
+            </div>
+            <button class="action-btn">follow</button>
+        </div>     
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="./image/premium_photo-1678722937221-c8c6e7905ebe.avif" alt="">
+            </div>
+            <div>
+              <p class="username">username4</p>
+              <p class="sub-text">hyee2003</p>
+            </div>
+            <button class="action-btn">follow</button>
+        </div>     
+        <div class="profile-card">
+          <div class="profile-pic">
+            <img src="./image/premium_photo-1686090449483-89a9b794e7cf.avif" alt="">
+            </div>
+            <div>
+              <p class="username">username5</p>
+              <p class="sub-text">hnbn2019</p>
+            </div>
+            <button class="action-btn">follow</button>
+        </div>     
+
+      </div>
+
+      <!-- <div class="modal">
+        <div class="modal-content">
+          <div class="modal-content-title">
+              <h4>Tạo bài viết</h4>
+              <ion-icon name="close-outline"></ion-icon>
+          </div>
+
+          <hr>
+
+
+          <div class="fb-area">
+            <span class="planceholder"> What's happening?</span>
+            <div class="input editable" contenteditable="true" spellcheck="false"></div>
+            <div class="input readonly" contenteditable="true" spellcheck="false"></div>
+          </div>  
+        </div>
+      </div>    -->
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-content-title">
+                <div class="tiltle">
+                    <h4>Tạo bài viết</h4>
+                </div>
+                <div class="icon">
+                  <ion-icon name="close-outline" onclick="handleBtnModalClose()"></ion-icon>
+                </div>
+            </div>
+            <hr>
+            <div class="modal-content-info">
+                <img src="./image/anh.jpg">
+                <div class="info-user">
+                    <p>gấuu channel</p>
+                    <div class="user">
+                      <ion-icon name="people"></ion-icon>
+                        <p>Bạn bè</p>
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="fb-area">
+                <!-- <span class="placeholder">What's happening?</span> -->
+                <div  id="post-content" class="input editable" contenteditable="true" spellcheck="false"></div>
+                <div class="input readonly" contenteditable="true" spellcheck="false"></div>
+            </div>
+            <div class="icon-botttom">
+              <ion-icon name="text-outline"></ion-icon>
+              <ion-icon name="happy-outline"></ion-icon>
+            </div>
+            <div class="modal-content-add">
+                <input type="text" placeholder="Thêm vào bài viết của bạn">
+                <div class="add-icon">
+                  <ion-icon name="images-outline"></ion-icon>
+                  <ion-icon name="person-add-outline"></ion-icon>
+                  <ion-icon name="happy-outline"></ion-icon>
+                  <ion-icon name="location-outline"></ion-icon>
+                  <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </div>
+            </div>
+            <div class="modal-content-end" onclick="handleBtnCreatePost()">
+                <p>Đăng</p>
+            </div>
+        </div>
+    </div>
+    
+       
+      
+  </section>
+  
+  <script src="case.js"></script>
+
+</body>
+
+</html>
